@@ -1,12 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  MessageCircle, 
-  Bot, 
-  Database, 
-  Upload, 
-  FileText, 
+import {
+  MessageCircle,
+  Bot,
+  Database,
+  Upload,
+  FileText,
   Mail,
   Bell,
   CheckCircle,
@@ -16,7 +22,7 @@ import {
   BarChart3,
   Download,
   Users,
-  Shield
+  Shield,
 } from "lucide-react";
 
 const HowItWorks = () => {
@@ -24,84 +30,94 @@ const HowItWorks = () => {
     {
       number: "01",
       title: "Upload via Telegram",
-      description: "Simply send your invoices to our dedicated Telegram bot. Supports images, PDFs, and documents.",
+      description:
+        "Simply send your invoices to our dedicated Telegram bot. Supports images, PDFs, and documents.",
       icon: <MessageCircle className="h-12 w-12" />,
       details: [
         "Forward invoices from your mobile camera",
-        "Send PDFs directly from your computer", 
+        "Send PDFs directly from your computer",
         "Batch upload multiple invoices at once",
-        "Secure encrypted transmission"
+        "Secure encrypted transmission",
       ],
-      color: "primary"
+      color: "primary",
     },
     {
       number: "02",
       title: "AI Auto-Extraction",
-      description: "Our advanced AI instantly extracts all relevant data from your invoices with 99%+ accuracy.",
+      description:
+        "Our advanced AI instantly extracts all relevant data from your invoices with 99%+ accuracy.",
       icon: <Bot className="h-12 w-12" />,
       details: [
         "Client name and contact information",
         "Invoice amounts and due dates",
         "Line items and descriptions",
-        "Tax details and payment terms"
+        "Tax details and payment terms",
       ],
-      color: "accent"
+      color: "accent",
     },
     {
       number: "03",
       title: "Smart Organization & Reminders",
-      description: "Data is organized automatically and smart reminders ensure you get paid on time.",
+      description:
+        "Data is organized automatically and smart reminders ensure you get paid on time.",
       icon: <Database className="h-12 w-12" />,
       details: [
         "Automatic data validation and storage",
         "Smart reminder scheduling",
         "Export to Google Sheets",
-        "Business analytics and reporting"
+        "Business analytics and reporting",
       ],
-      color: "primary"
-    }
+      color: "primary",
+    },
   ];
 
   const features = [
     {
       icon: <Smartphone className="h-8 w-8" />,
       title: "Mobile-First Design",
-      description: "Upload invoices instantly from anywhere using your smartphone camera."
-    },
-    {
-      icon: <Cloud className="h-8 w-8" />,
-      title: "Cloud Processing",
-      description: "Powered by Oracle Cloud infrastructure for reliable, fast processing."
+      description:
+        "Upload invoices instantly from anywhere using your smartphone camera.",
     },
     {
       icon: <Shield className="h-8 w-8" />,
       title: "Enterprise Security",
-      description: "Bank-grade encryption and SOC 2 compliance keep your data safe."
+      description:
+        "Bank-grade encryption and SOC 2 compliance keep your data safe.",
     },
     {
       icon: <BarChart3 className="h-8 w-8" />,
       title: "Business Intelligence",
-      description: "Get insights into payment patterns and cash flow trends."
+      description: "Get insights into payment patterns and cash flow trends.",
     },
     {
       icon: <Bell className="h-8 w-8" />,
       title: "Smart Reminders",
-      description: "Automated follow-ups via email and Telegram improve collection rates."
+      description:
+        "Automated follow-ups via email and Telegram improve collection rates.",
     },
     {
       icon: <Download className="h-8 w-8" />,
       title: "Easy Export",
-      description: "Export to Google Sheets, Excel, or integrate with your existing tools."
-    }
+      description:
+        "Export to Google Sheets, Excel, or integrate with your existing tools.",
+    },
   ];
 
   const integrations = [
-    { name: "Telegram", description: "Primary interface for uploads and notifications" },
-    { name: "Google Sheets", description: "Direct export of organized invoice data" },
+    {
+      name: "Telegram",
+      description: "Primary interface for uploads and notifications",
+    },
+    {
+      name: "Google Sheets",
+      description: "Direct export of organized invoice data",
+    },
     { name: "Email", description: "Professional reminder emails to clients" },
-    { name: "Oracle Cloud", description: "Reliable infrastructure and data storage" },
     { name: "n8n", description: "Powerful workflow automation engine" },
-    { name: "PDF Processing", description: "Advanced OCR for document extraction" }
+    {
+      name: "PDF Processing",
+      description: "Advanced OCR for document extraction",
+    },
   ];
 
   return (
@@ -113,10 +129,14 @@ const HowItWorks = () => {
             How It Works
           </Badge>
           <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">
-            Invoice automation <span className="bg-gradient-primary bg-clip-text text-transparent">made simple</span>
+            Invoice automation{" "}
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              made simple
+            </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Transform your manual invoice processing into a streamlined, automated workflow in just three easy steps.
+            Transform your manual invoice processing into a streamlined,
+            automated workflow in just three easy steps.
           </p>
         </div>
       </section>
@@ -127,62 +147,85 @@ const HowItWorks = () => {
           <div className="space-y-24">
             {steps.map((step, index) => (
               <div key={index} className="relative">
-                <div className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                }`}>
+                <div
+                  className={`grid lg:grid-cols-2 gap-12 items-center ${
+                    index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
+                  }`}
+                >
                   {/* Content */}
-                  <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                  <div
+                    className={`space-y-6 ${
+                      index % 2 === 1 ? "lg:col-start-2" : ""
+                    }`}
+                  >
                     <div className="flex items-center space-x-4">
-                      <div className={`w-16 h-16 rounded-2xl flex items-center justify-center ${
-                        step.color === 'primary' ? 'bg-gradient-primary' : 'bg-gradient-accent'
-                      }`}>
-                        <div className="text-white">
-                          {step.icon}
-                        </div>
+                      <div
+                        className={`w-16 h-16 rounded-2xl flex items-center justify-center ${
+                          step.color === "primary"
+                            ? "bg-gradient-primary"
+                            : "bg-gradient-accent"
+                        }`}
+                      >
+                        <div className="text-white">{step.icon}</div>
                       </div>
                       <div>
-                        <div className="text-sm font-medium text-muted-foreground">Step {step.number}</div>
+                        <div className="text-sm font-medium text-muted-foreground">
+                          Step {step.number}
+                        </div>
                         <h2 className="text-3xl font-bold">{step.title}</h2>
                       </div>
                     </div>
-                    
+
                     <p className="text-xl text-muted-foreground leading-relaxed">
                       {step.description}
                     </p>
-                    
+
                     <div className="space-y-3">
                       {step.details.map((detail, detailIndex) => (
-                        <div key={detailIndex} className="flex items-center space-x-3">
+                        <div
+                          key={detailIndex}
+                          className="flex items-center space-x-3"
+                        >
                           <CheckCircle className="h-5 w-5 text-success flex-shrink-0" />
-                          <span className="text-muted-foreground">{detail}</span>
+                          <span className="text-muted-foreground">
+                            {detail}
+                          </span>
                         </div>
                       ))}
                     </div>
                   </div>
-                  
+
                   {/* Visual */}
-                  <div className={`relative ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
+                  <div
+                    className={`relative ${
+                      index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""
+                    }`}
+                  >
                     <Card className="p-8 bg-gradient-card border-0 shadow-elegant hover-lift">
                       <div className="text-center space-y-6">
                         <div className="text-8xl font-bold text-primary/10">
                           {step.number}
                         </div>
-                        <div className={`w-24 h-24 mx-auto rounded-3xl flex items-center justify-center ${
-                          step.color === 'primary' ? 'bg-gradient-primary' : 'bg-gradient-accent'
-                        }`}>
-                          <div className="text-white">
-                            {step.icon}
-                          </div>
+                        <div
+                          className={`w-24 h-24 mx-auto rounded-3xl flex items-center justify-center ${
+                            step.color === "primary"
+                              ? "bg-gradient-primary"
+                              : "bg-gradient-accent"
+                          }`}
+                        >
+                          <div className="text-white">{step.icon}</div>
                         </div>
                         <div className="space-y-2">
                           <h3 className="text-2xl font-bold">{step.title}</h3>
-                          <p className="text-muted-foreground">{step.description}</p>
+                          <p className="text-muted-foreground">
+                            {step.description}
+                          </p>
                         </div>
                       </div>
                     </Card>
                   </div>
                 </div>
-                
+
                 {/* Connection Line */}
                 {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 mt-12">
@@ -203,16 +246,21 @@ const HowItWorks = () => {
               Platform Features
             </Badge>
             <h2 className="text-3xl font-bold sm:text-4xl">
-              Everything you need for <span className="text-primary">invoice automation</span>
+              Everything you need for{" "}
+              <span className="text-primary">invoice automation</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Powerful features designed to streamline your entire invoice workflow
+              Powerful features designed to streamline your entire invoice
+              workflow
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <Card key={index} className="hover-lift bg-gradient-card border-0 shadow-elegant group">
+              <Card
+                key={index}
+                className="hover-lift bg-gradient-card border-0 shadow-elegant group"
+              >
                 <CardHeader>
                   <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center text-primary-foreground mb-4 group-hover:scale-110 transition-spring">
                     {feature.icon}
@@ -238,16 +286,20 @@ const HowItWorks = () => {
               Integrations
             </Badge>
             <h2 className="text-3xl font-bold sm:text-4xl">
-              Works with your <span className="text-accent">favorite tools</span>
+              Works with your{" "}
+              <span className="text-accent">favorite tools</span>
             </h2>
             <p className="text-xl text-muted-foreground">
               Seamlessly integrate with the tools you already use
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {integrations.map((integration, index) => (
-              <Card key={index} className="hover-lift bg-gradient-card border-0 shadow-elegant transition-smooth">
+              <Card
+                key={index}
+                className="hover-lift bg-gradient-card border-0 shadow-elegant transition-smooth"
+              >
                 <CardHeader className="text-center">
                   <CardTitle className="text-lg">{integration.name}</CardTitle>
                   <CardDescription>{integration.description}</CardDescription>
@@ -263,17 +315,29 @@ const HowItWorks = () => {
         <div className="absolute inset-0 bg-gradient-hero opacity-10" />
         <div className="relative mx-auto max-w-4xl text-center space-y-8">
           <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Ready to <span className="bg-gradient-primary bg-clip-text text-transparent">automate</span> your workflow?
+            Ready to{" "}
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              automate
+            </span>{" "}
+            your workflow?
           </h2>
           <p className="text-xl text-muted-foreground">
-            Join hundreds of businesses already saving time and improving cash flow with PJ Automation
+            Join hundreds of businesses already saving time and improving cash
+            flow with PJ Automation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-primary hover:shadow-primary transition-spring text-lg px-8 py-6">
+            <Button
+              size="lg"
+              className="bg-gradient-primary hover:shadow-primary transition-spring text-lg px-8 py-6"
+            >
               Start Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className="hover-lift text-lg px-8 py-6">
+            <Button
+              variant="outline"
+              size="lg"
+              className="hover-lift text-lg px-8 py-6"
+            >
               View Pricing
             </Button>
           </div>
