@@ -125,9 +125,6 @@ const HowItWorks = () => {
       {/* Header */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="mx-auto max-w-4xl text-center space-y-6">
-          <Badge variant="secondary" className="bg-primary-soft text-primary">
-            How It Works
-          </Badge>
           <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">
             Invoice automation{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
@@ -282,9 +279,6 @@ const HowItWorks = () => {
       <section className="px-4 sm:px-6 lg:px-8 mb-24">
         <div className="mx-auto max-w-7xl">
           <div className="text-center space-y-4 mb-16">
-            <Badge variant="secondary" className="bg-primary-soft text-primary">
-              Integrations
-            </Badge>
             <h2 className="text-3xl font-bold sm:text-4xl">
               Works with your{" "}
               <span className="text-accent">favorite tools</span>
