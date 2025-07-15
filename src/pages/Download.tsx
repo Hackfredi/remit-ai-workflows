@@ -355,47 +355,6 @@ const Download = () => {
         </div>
       </section>
 
-      {/* Oracle Cloud Callout */}
-      <section className="px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="mx-auto max-w-4xl">
-          <Card className="bg-success/5 border-success/20">
-            <CardContent className="p-8 text-center">
-              <div className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Cloud className="h-8 w-8 text-success" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">
-                <span className="text-success">
-                  Runs on Oracle Cloud Free Tier
-                </span>
-              </h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                All our workflows are optimized to run efficiently on Oracle
-                Cloud's Always Free tier, giving you enterprise-grade
-                infrastructure at zero cost.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="outline" asChild>
-                  <a
-                    href="https://oracle.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Learn about Oracle Cloud
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
-                <Button variant="outline" asChild>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    Setup Guide
-                    <FileText className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="px-4 sm:px-6 lg:px-8 text-center">
         <div className="mx-auto max-w-3xl space-y-6">
