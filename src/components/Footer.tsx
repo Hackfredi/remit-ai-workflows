@@ -117,18 +117,6 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-4 text-sm text-muted-foreground">
               <span>© 2024 PJ Automation. All rights reserved.</span>
-              <div className="flex items-center space-x-1">
-                <span>Built with</span>
-                <a
-                  href="https://n8n.io"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-1 hover:text-foreground transition-smooth"
-                >
-                  <span className="font-medium">n8n</span>
-                  <ExternalLink className="h-3 w-3" />
-                </a>
-              </div>
             </div>
           </div>
         </div>
