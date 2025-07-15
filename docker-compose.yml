@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  pjautomation-ui:
+    container_name: pjautomation-ui
+    build: .
+    networks:
+      - npm-network
+    restart: always
+
+networks:
+  npm-network:
+    external: true
