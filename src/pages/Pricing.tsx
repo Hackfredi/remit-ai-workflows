@@ -1,19 +1,25 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
-import { 
-  CheckCircle, 
-  X, 
-  Star, 
+import {
+  CheckCircle,
+  X,
+  Star,
   ArrowRight,
   Users,
   Shield,
   Headphones,
   Zap,
   Download,
-  Cloud
+  Cloud,
 } from "lucide-react";
 
 const Pricing = () => {
@@ -25,7 +31,7 @@ const Pricing = () => {
       name: "Basic",
       description: "Perfect for freelancers and small businesses",
       monthlyPrice: 19.99,
-      yearlyPrice: 191.90,
+      yearlyPrice: 191.9,
       monthlyPriceINR: 999,
       yearlyPriceINR: 9590,
       features: [
@@ -33,20 +39,20 @@ const Pricing = () => {
         "AI data extraction",
         "Basic storage",
         "Email support",
-        "₹49 per additional invoice"
+        "₹49 per additional invoice",
       ],
       limitations: [
         "No automated reminders",
         "No business reports",
-        "Standard support only"
+        "Standard support only",
       ],
-      popular: false
+      popular: false,
     },
     {
       name: "Pro",
       description: "Most popular for growing businesses",
       monthlyPrice: 39.99,
-      yearlyPrice: 383.90,
+      yearlyPrice: 383.9,
       monthlyPriceINR: 1999,
       yearlyPriceINR: 19190,
       features: [
@@ -55,19 +61,16 @@ const Pricing = () => {
         "Automated reminders",
         "Advanced storage",
         "Email + Telegram support",
-        "Export to Google Sheets"
+        "Export to Google Sheets",
       ],
-      limitations: [
-        "No business reports",
-        "Standard support response"
-      ],
-      popular: true
+      limitations: ["No business reports", "Standard support response"],
+      popular: true,
     },
     {
       name: "Business",
       description: "Advanced features for scaling companies",
       monthlyPrice: 79.99,
-      yearlyPrice: 767.90,
+      yearlyPrice: 767.9,
       monthlyPriceINR: 3999,
       yearlyPriceINR: 38390,
       features: [
@@ -77,10 +80,10 @@ const Pricing = () => {
         "Business reports & analytics",
         "Priority support",
         "Export to Google Sheets",
-        "Custom integrations"
+        "Custom integrations",
       ],
       limitations: [],
-      popular: false
+      popular: false,
     },
     {
       name: "Enterprise",
@@ -97,11 +100,11 @@ const Pricing = () => {
         "Dedicated support",
         "Custom integrations",
         "SLA guarantee",
-        "Custom workflows"
+        "Custom workflows",
       ],
       limitations: [],
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const selfHostedPlans = [
@@ -114,14 +117,14 @@ const Pricing = () => {
         "Core demo workflow",
         "Basic invoice extraction",
         "Setup documentation",
-        "Community support"
+        "Community support",
       ],
       limitations: [
         "No reminders",
         "No advanced features",
-        "Limited documentation"
+        "Limited documentation",
       ],
-      popular: false
+      popular: false,
     },
     {
       name: "Standard",
@@ -133,13 +136,10 @@ const Pricing = () => {
         "Advanced data storage",
         "Export integrations",
         "Detailed documentation",
-        "Email support"
+        "Email support",
       ],
-      limitations: [
-        "No automated reminders",
-        "Standard support only"
-      ],
-      popular: false
+      limitations: ["No automated reminders", "Standard support only"],
+      popular: false,
     },
     {
       name: "Pro",
@@ -152,10 +152,10 @@ const Pricing = () => {
         "Automated reminder system",
         "Export integrations",
         "Comprehensive documentation",
-        "Priority email support"
+        "Priority email support",
       ],
       limitations: [],
-      popular: true
+      popular: true,
     },
     {
       name: "Ultimate",
@@ -169,14 +169,15 @@ const Pricing = () => {
         "Export integrations",
         "Personal setup guide",
         "Priority support",
-        "30-day setup assistance"
+        "30-day setup assistance",
       ],
       limitations: [],
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
-  const currentPlans = selectedPlan === "managed" ? managedPlans : selfHostedPlans;
+  const currentPlans =
+    selectedPlan === "managed" ? managedPlans : selfHostedPlans;
 
   return (
     <div className="min-h-screen pt-20 pb-24">
@@ -187,7 +188,11 @@ const Pricing = () => {
             Pricing Plans
           </Badge>
           <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">
-            Choose the <span className="bg-gradient-primary bg-clip-text text-transparent">perfect plan</span> for your business
+            Choose the{" "}
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              perfect plan
+            </span>{" "}
+            for your business
           </h1>
           <p className="text-xl text-muted-foreground">
             Transparent pricing. No hidden fees. Cancel anytime.
@@ -202,8 +207,8 @@ const Pricing = () => {
             <button
               onClick={() => setSelectedPlan("managed")}
               className={`p-6 rounded-xl transition-smooth text-left ${
-                selectedPlan === "managed" 
-                  ? "bg-background shadow-elegant" 
+                selectedPlan === "managed"
+                  ? "bg-background shadow-elegant"
                   : "hover:bg-background/50"
               }`}
             >
@@ -215,18 +220,20 @@ const Pricing = () => {
                 Fully managed cloud solution. We handle everything for you.
               </p>
             </button>
-            
+
             <button
               onClick={() => setSelectedPlan("self-hosted")}
               className={`p-6 rounded-xl transition-smooth text-left ${
-                selectedPlan === "self-hosted" 
-                  ? "bg-background shadow-elegant" 
+                selectedPlan === "self-hosted"
+                  ? "bg-background shadow-elegant"
                   : "hover:bg-background/50"
               }`}
             >
               <div className="flex items-center space-x-3 mb-2">
                 <Download className="h-6 w-6 text-accent" />
-                <span className="text-lg font-semibold">Self-Hosted Workflows</span>
+                <span className="text-lg font-semibold">
+                  Self-Hosted Workflows
+                </span>
               </div>
               <p className="text-sm text-muted-foreground">
                 Download and run on your own n8n server. Complete control.
@@ -247,20 +254,28 @@ const Pricing = () => {
                   <p className="text-sm text-muted-foreground">Save 20%</p>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <span className={`text-sm ${!isAnnual ? "text-foreground" : "text-muted-foreground"}`}>
+                  <span
+                    className={`text-sm ${
+                      !isAnnual ? "text-foreground" : "text-muted-foreground"
+                    }`}
+                  >
                     Monthly
                   </span>
-                  <Switch 
-                    checked={isAnnual} 
-                    onCheckedChange={setIsAnnual}
-                  />
-                  <span className={`text-sm ${isAnnual ? "text-foreground" : "text-muted-foreground"}`}>
+                  <Switch checked={isAnnual} onCheckedChange={setIsAnnual} />
+                  <span
+                    className={`text-sm ${
+                      isAnnual ? "text-foreground" : "text-muted-foreground"
+                    }`}
+                  >
                     Yearly
                   </span>
                 </div>
               </div>
               {isAnnual && (
-                <Badge variant="secondary" className="mt-3 bg-success/10 text-success border-success/20">
+                <Badge
+                  variant="secondary"
+                  className="mt-3 bg-success/10 text-success border-success/20"
+                >
                   Save 20% with annual plans
                 </Badge>
               )}
@@ -274,11 +289,11 @@ const Pricing = () => {
         <div className="mx-auto max-w-7xl">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {currentPlans.map((plan, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className={`relative hover-lift transition-spring ${
-                  plan.popular 
-                    ? "ring-2 ring-primary bg-gradient-card border-primary/20 scale-105" 
+                  plan.popular
+                    ? "ring-2 ring-primary bg-gradient-card border-primary/20 scale-105"
                     : "bg-gradient-card border-0"
                 } shadow-elegant`}
               >
@@ -288,27 +303,41 @@ const Pricing = () => {
                     Most Popular
                   </Badge>
                 )}
-                
+
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-xl">{plan.name}</CardTitle>
                   <CardDescription className="min-h-[3rem] flex items-center">
                     {plan.description}
                   </CardDescription>
-                  
+
                   <div className="space-y-2">
                     {selectedPlan === "managed" ? (
                       plan.monthlyPrice ? (
                         <>
                           <div className="text-3xl font-bold">
-                            ${isAnnual ? plan.yearlyPrice / 12 : plan.monthlyPrice}
-                            <span className="text-sm text-muted-foreground font-normal">/month</span>
+                            $
+                            {isAnnual
+                              ? plan.yearlyPrice / 12
+                              : plan.monthlyPrice}
+                            <span className="text-sm text-muted-foreground font-normal">
+                              /month
+                            </span>
                           </div>
                           <div className="text-sm text-muted-foreground">
-                            ₹{isAnnual ? Math.round(plan.yearlyPriceINR / 12) : plan.monthlyPriceINR}/month
+                            ₹
+                            {isAnnual
+                              ? Math.round(plan.yearlyPriceINR / 12)
+                              : plan.monthlyPriceINR}
+                            /month
                           </div>
                           {isAnnual && (
                             <div className="text-xs text-success">
-                              Save ${((plan.monthlyPrice * 12) - plan.yearlyPrice).toFixed(2)}/year
+                              Save $
+                              {(
+                                plan.monthlyPrice * 12 -
+                                plan.yearlyPrice
+                              ).toFixed(2)}
+                              /year
                             </div>
                           )}
                         </>
@@ -319,7 +348,10 @@ const Pricing = () => {
                       <>
                         <div className="text-3xl font-bold">
                           ${plan.price}
-                          <span className="text-sm text-muted-foreground font-normal"> one-time</span>
+                          <span className="text-sm text-muted-foreground font-normal">
+                            {" "}
+                            one-time
+                          </span>
                         </div>
                         <div className="text-sm text-muted-foreground">
                           ₹{plan.priceINR} one-time
@@ -328,7 +360,7 @@ const Pricing = () => {
                     )}
                   </div>
                 </CardHeader>
-                
+
                 <CardContent className="space-y-6">
                   <div className="space-y-3">
                     {plan.features.map((feature, idx) => (
@@ -337,31 +369,38 @@ const Pricing = () => {
                         <span className="text-sm">{feature}</span>
                       </div>
                     ))}
-                    
+
                     {plan.limitations && plan.limitations.length > 0 && (
                       <>
                         {plan.limitations.map((limitation, idx) => (
-                          <div key={idx} className="flex items-start space-x-3 opacity-60">
+                          <div
+                            key={idx}
+                            className="flex items-start space-x-3 opacity-60"
+                          >
                             <X className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                            <span className="text-sm text-muted-foreground">{limitation}</span>
+                            <span className="text-sm text-muted-foreground">
+                              {limitation}
+                            </span>
                           </div>
                         ))}
                       </>
                     )}
                   </div>
-                  
-                  <Button 
+
+                  <Button
                     className={`w-full ${
-                      plan.popular 
-                        ? "bg-gradient-primary hover:shadow-primary" 
+                      plan.popular
+                        ? "bg-gradient-primary hover:shadow-primary"
                         : "hover-glow"
                     } transition-spring`}
                     variant={plan.popular ? "default" : "outline"}
                   >
-                    {plan.monthlyPrice || plan.price ? "Get Started" : "Contact Sales"}
+                    {plan.monthlyPrice || plan.price
+                      ? "Get Started"
+                      : "Contact Sales"}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                  
+
                   {selectedPlan === "managed" && index === 0 && (
                     <p className="text-xs text-center text-muted-foreground">
                       14-day free trial included
@@ -387,7 +426,7 @@ const Pricing = () => {
                 SOC 2 compliant with end-to-end encryption
               </p>
             </div>
-            
+
             <div className="space-y-3">
               <div className="w-12 h-12 bg-gradient-accent rounded-xl flex items-center justify-center mx-auto">
                 <Headphones className="h-6 w-6 text-accent-foreground" />
@@ -397,16 +436,6 @@ const Pricing = () => {
                 Get help when you need it via email and Telegram
               </p>
             </div>
-            
-            <div className="space-y-3">
-              <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto">
-                <Zap className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <h3 className="font-semibold">99.9% Uptime</h3>
-              <p className="text-sm text-muted-foreground">
-                Reliable infrastructure powered by Oracle Cloud
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -414,48 +443,60 @@ const Pricing = () => {
       {/* FAQ Section */}
       <section className="px-4 sm:px-6 lg:px-8 mt-24">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-2xl font-bold mb-8">Frequently Asked Questions</h2>
+          <h2 className="text-2xl font-bold mb-8">
+            Frequently Asked Questions
+          </h2>
           <div className="grid md:grid-cols-2 gap-6 text-left">
             <Card className="bg-gradient-card border-0 shadow-elegant">
               <CardHeader>
-                <CardTitle className="text-lg">Can I switch plans anytime?</CardTitle>
+                <CardTitle className="text-lg">
+                  Can I switch plans anytime?
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately.
+                  Yes! You can upgrade or downgrade your plan at any time.
+                  Changes take effect immediately.
                 </p>
               </CardContent>
             </Card>
-            
+
             <Card className="bg-gradient-card border-0 shadow-elegant">
               <CardHeader>
-                <CardTitle className="text-lg">What happens if I exceed my plan limits?</CardTitle>
+                <CardTitle className="text-lg">
+                  What happens if I exceed my plan limits?
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  For managed plans, additional invoices are charged at ₹49 each. We'll notify you before any overages.
+                  For managed plans, additional invoices are charged at ₹49
+                  each. We'll notify you before any overages.
                 </p>
               </CardContent>
             </Card>
-            
+
             <Card className="bg-gradient-card border-0 shadow-elegant">
               <CardHeader>
                 <CardTitle className="text-lg">Is my data secure?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Absolutely. We use enterprise-grade encryption and are SOC 2 compliant. Your data is never shared.
+                  Absolutely. We use enterprise-grade encryption and are SOC 2
+                  compliant. Your data is never shared.
                 </p>
               </CardContent>
             </Card>
-            
+
             <Card className="bg-gradient-card border-0 shadow-elegant">
               <CardHeader>
-                <CardTitle className="text-lg">Do you offer setup assistance?</CardTitle>
+                <CardTitle className="text-lg">
+                  Do you offer setup assistance?
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Yes! Setup assistance is included in Ultimate self-hosted plan, or available as paid add-on for other plans.
+                  Yes! Setup assistance is included in Ultimate self-hosted
+                  plan, or available as paid add-on for other plans.
                 </p>
               </CardContent>
             </Card>
