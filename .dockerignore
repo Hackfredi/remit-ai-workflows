@@ -4,4 +4,3 @@ dist
 .vscode
 *.log
 Dockerfile
-nginx.conf
