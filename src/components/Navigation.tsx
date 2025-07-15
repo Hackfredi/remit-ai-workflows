@@ -1,15 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { 
-  Menu, 
-  X, 
-  Bot, 
-  Moon, 
-  Sun,
-  Github,
-  MessageCircle 
-} from "lucide-react";
+import { Menu, X, Bot, Moon, Sun, MessageCircle } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,9 +46,7 @@ const Navigation = () => {
                 key={item.name}
                 to={item.path}
                 className={`relative text-sm font-medium transition-smooth hover:text-primary ${
-                  isActive(item.path) 
-                    ? "text-primary" 
-                    : "text-muted-foreground"
+                  isActive(item.path) ? "text-primary" : "text-muted-foreground"
                 }`}
               >
                 {item.name}
@@ -75,31 +65,19 @@ const Navigation = () => {
               onClick={toggleTheme}
               className="hover-lift"
             >
-              {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+              {isDark ? (
+                <Sun className="h-4 w-4" />
+              ) : (
+                <Moon className="h-4 w-4" />
+              )}
             </Button>
-            
-            <Button
-              variant="ghost"
-              size="sm"
-              asChild
-              className="hover-lift"
-            >
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <Github className="h-4 w-4" />
-              </a>
-            </Button>
-            
-            <Button
-              variant="ghost"
-              size="sm"
-              asChild
-              className="hover-lift"
-            >
+
+            <Button variant="ghost" size="sm" asChild className="hover-lift">
               <a href="https://t.me" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="h-4 w-4" />
               </a>
             </Button>
-            
+
             <Button variant="default" size="sm" className="hover-glow">
               Get Started
             </Button>
@@ -112,7 +90,11 @@ const Navigation = () => {
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>
@@ -135,7 +117,7 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              
+
               <div className="flex items-center space-x-2 px-3 py-2">
                 <Button
                   variant="ghost"
@@ -143,7 +125,11 @@ const Navigation = () => {
                   onClick={toggleTheme}
                   className="hover-lift"
                 >
-                  {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+                  {isDark ? (
+                    <Sun className="h-4 w-4" />
+                  ) : (
+                    <Moon className="h-4 w-4" />
+                  )}
                 </Button>
                 <Button variant="default" size="sm" className="hover-glow">
                   Get Started
