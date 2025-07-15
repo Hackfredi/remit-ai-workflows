@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { 
-  Bot, 
-  MessageCircle, 
-  Mail,
-  ExternalLink
-} from "lucide-react";
+import { Bot, MessageCircle, Mail, ExternalLink } from "lucide-react";
 
 const Footer = () => {
   const footerLinks = {
@@ -13,20 +8,20 @@ const Footer = () => {
       { name: "How It Works", path: "/how-it-works" },
       { name: "Pricing", path: "/pricing" },
       { name: "Download", path: "/download" },
-      { name: "Plans Comparison", path: "/plans" }
+      { name: "Plans Comparison", path: "/plans" },
     ],
     support: [
       { name: "Contact", path: "/contact" },
       { name: "FAQs", path: "/faqs" },
       { name: "Documentation", path: "#" },
-      { name: "Community", path: "#" }
+      { name: "Community", path: "#" },
     ],
     company: [
       { name: "About", path: "#" },
       { name: "Blog", path: "#" },
       { name: "Privacy Policy", path: "#" },
-      { name: "Terms of Service", path: "#" }
-    ]
+      { name: "Terms of Service", path: "#" },
+    ],
   };
 
   return (
@@ -44,12 +39,16 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-muted-foreground max-w-xs">
-              AI-driven invoice processing and reminder automation. 
-              Streamline your workflow and get paid faster.
+              AI-driven invoice processing and reminder automation. Streamline
+              your workflow and get paid faster.
             </p>
             <div className="flex space-x-3">
               <Button variant="ghost" size="sm" asChild>
-                <a href="https://t.me" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://t.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <MessageCircle className="h-4 w-4" />
                 </a>
               </Button>
@@ -67,7 +66,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     to={link.path}
                     className="text-muted-foreground hover:text-foreground transition-smooth"
                   >
@@ -84,7 +83,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     to={link.path}
                     className="text-muted-foreground hover:text-foreground transition-smooth"
                   >
@@ -101,7 +100,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     to={link.path}
                     className="text-muted-foreground hover:text-foreground transition-smooth"
                   >
@@ -120,9 +119,9 @@ const Footer = () => {
               <span>© 2024 PJ Automation. All rights reserved.</span>
               <div className="flex items-center space-x-1">
                 <span>Built with</span>
-                <a 
-                  href="https://n8n.io" 
-                  target="_blank" 
+                <a
+                  href="https://n8n.io"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-1 hover:text-foreground transition-smooth"
                 >
@@ -130,12 +129,6 @@ const Footer = () => {
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </div>
-            </div>
-            
-            <div className="text-sm text-muted-foreground">
-              <span className="inline-block px-2 py-1 bg-success/10 text-success rounded-md text-xs">
-                Runs on Oracle Cloud Free Tier
-              </span>
             </div>
           </div>
         </div>
