@@ -78,7 +78,7 @@ const FAQs = () => {
           question:
             "What are the system requirements for self-hosted workflows?",
           answer:
-            "You need n8n v1.0+, Node.js 18+, and depending on the package: PostgreSQL/MySQL and Redis. Minimum 2GB RAM recommended. All workflows are optimized to run on Oracle Cloud's Always Free tier.",
+            "You need n8n v1.0+, Node.js 18+, and depending on the package: PostgreSQL/MySQL and Redis. Minimum 2GB RAM recommended.",
         },
         {
           question: "How do I integrate with my existing systems?",
@@ -93,7 +93,7 @@ const FAQs = () => {
         {
           question: "How reliable is the service?",
           answer:
-            "We maintain 99.9% uptime with our Oracle Cloud infrastructure. For self-hosted solutions, reliability depends on your infrastructure, but our workflows are designed to be fault-tolerant and include error handling.",
+            "For self-hosted solutions, reliability depends on your infrastructure, but our workflows are designed to be fault-tolerant and include error handling.",
         },
       ],
     },
