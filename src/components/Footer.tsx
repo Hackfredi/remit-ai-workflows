@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
   Bot, 
-  Github, 
   MessageCircle, 
   Mail,
   ExternalLink
@@ -49,11 +48,6 @@ const Footer = () => {
               Streamline your workflow and get paid faster.
             </p>
             <div className="flex space-x-3">
-              <Button variant="ghost" size="sm" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                  <Github className="h-4 w-4" />
-                </a>
-              </Button>
               <Button variant="ghost" size="sm" asChild>
                 <a href="https://t.me" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="h-4 w-4" />
