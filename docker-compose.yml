@@ -3,6 +3,10 @@ services:
     build:
       context: .
     container_name: pjautomation-ui
-   networks:
+    networks:
+      - npm-network
+    restart: always
+
+networks:
   npm-network:
     external: true
