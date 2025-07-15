@@ -87,9 +87,6 @@ const Contact = () => {
       {/* Header */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="mx-auto max-w-4xl text-center space-y-6">
-          <Badge variant="secondary" className="bg-primary-soft text-primary">
-            Contact Us
-          </Badge>
           <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">
             We're here to{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
