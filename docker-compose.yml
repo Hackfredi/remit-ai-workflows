@@ -6,7 +6,5 @@ services:
     networks:
       - npm-network
     restart: always
-
-networks:
-  npm-network:
-    external: true
+    ports:
+      - 3001:80   # Host port : Container port (you can change 3001 if needed)
