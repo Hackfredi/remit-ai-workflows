@@ -115,12 +115,6 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge
-                  variant="secondary"
-                  className="bg-primary-soft text-primary border-primary/20"
-                >
-                  ✨ Powered by n8n Automation
-                </Badge>
                 <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
                   <span className="bg-gradient-hero bg-clip-text text-transparent">
                     Automate Invoices.
@@ -188,9 +182,6 @@ const Home = () => {
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="mx-auto max-w-7xl">
           <div className="text-center space-y-4 mb-16">
-            <Badge variant="secondary" className="bg-accent-soft text-accent">
-              How It Works
-            </Badge>
             <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
               Simple. <span className="text-primary">Automated.</span>{" "}
               Effective.
@@ -232,9 +223,6 @@ const Home = () => {
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="text-center space-y-4 mb-16">
-            <Badge variant="secondary" className="bg-primary-soft text-primary">
-              Features
-            </Badge>
             <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
               Everything you need to{" "}
               <span className="text-accent">automate invoices</span>
