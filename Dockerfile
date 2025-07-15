@@ -16,7 +16,7 @@ FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 
 # 🔥 Copy nginx.conf from your build context (not from previous image)
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
