@@ -1,19 +1,24 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Download as DownloadIcon, 
-  CheckCircle, 
-  Code, 
+import {
+  Download as DownloadIcon,
+  CheckCircle,
+  Code,
   Server,
   Shield,
   Zap,
   FileText,
   Settings,
   ArrowRight,
-  Github,
   ExternalLink,
-  Cloud
+  Cloud,
 } from "lucide-react";
 
 const Download = () => {
@@ -27,16 +32,16 @@ const Download = () => {
         "Basic AI data extraction",
         "Simple data storage",
         "Setup documentation",
-        "Community support"
+        "Community support",
       ],
       limitations: [
         "No automated reminders",
         "Limited extraction accuracy",
-        "Basic documentation only"
+        "Basic documentation only",
       ],
       downloadSize: "2.1 MB",
       requirements: "n8n v1.0+",
-      popular: false
+      popular: false,
     },
     {
       name: "Standard",
@@ -48,15 +53,12 @@ const Download = () => {
         "Google Sheets export",
         "Webhook integrations",
         "Comprehensive documentation",
-        "Email support included"
+        "Email support included",
       ],
-      limitations: [
-        "No automated reminders",
-        "Standard support response time"
-      ],
+      limitations: ["No automated reminders", "Standard support response time"],
       downloadSize: "8.7 MB",
       requirements: "n8n v1.0+, Node.js 18+",
-      popular: false
+      popular: false,
     },
     {
       name: "Pro",
@@ -69,12 +71,12 @@ const Download = () => {
         "Multi-channel notifications",
         "Custom reminder templates",
         "Analytics dashboard",
-        "Priority email support"
+        "Priority email support",
       ],
       limitations: [],
       downloadSize: "15.3 MB",
       requirements: "n8n v1.0+, Node.js 18+, Redis",
-      popular: true
+      popular: true,
     },
     {
       name: "Ultimate",
@@ -88,36 +90,36 @@ const Download = () => {
         "Personal setup guide",
         "30-day setup assistance",
         "Priority support",
-        "Custom workflow modifications"
+        "Custom workflow modifications",
       ],
       limitations: [],
       downloadSize: "22.1 MB",
       requirements: "n8n v1.0+, Node.js 18+, Redis, PostgreSQL",
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const technicalSpecs = [
     {
       icon: <Server className="h-5 w-5" />,
       title: "Self-Hosted",
-      description: "Complete control over your data and infrastructure"
+      description: "Complete control over your data and infrastructure",
     },
     {
       icon: <Shield className="h-5 w-5" />,
       title: "Secure",
-      description: "No data leaves your servers. Full privacy guaranteed"
+      description: "No data leaves your servers. Full privacy guaranteed",
     },
     {
       icon: <Zap className="h-5 w-5" />,
       title: "Fast Setup",
-      description: "Get running in under 30 minutes with our guides"
+      description: "Get running in under 30 minutes with our guides",
     },
     {
       icon: <Code className="h-5 w-5" />,
       title: "Customizable",
-      description: "Modify workflows to fit your exact business needs"
-    }
+      description: "Modify workflows to fit your exact business needs",
+    },
   ];
 
   const requirements = [
@@ -127,7 +129,7 @@ const Download = () => {
     "Redis for caching (Pro/Ultimate)",
     "Telegram Bot API access",
     "Email service (SMTP) for reminders",
-    "Minimum 2GB RAM, 4GB recommended"
+    "Minimum 2GB RAM, 4GB recommended",
   ];
 
   return (
@@ -140,12 +142,15 @@ const Download = () => {
             Self-Hosted Workflows
           </Badge>
           <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">
-            <span className="bg-gradient-accent bg-clip-text text-transparent">Download</span> and deploy <br />
+            <span className="bg-gradient-accent bg-clip-text text-transparent">
+              Download
+            </span>{" "}
+            and deploy <br />
             on your infrastructure
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Get complete control with our self-hosted n8n workflows. 
-            Perfect for teams that need custom integrations and data sovereignty.
+            Get complete control with our self-hosted n8n workflows. Perfect for
+            teams that need custom integrations and data sovereignty.
           </p>
         </div>
       </section>
@@ -155,15 +160,18 @@ const Download = () => {
         <div className="mx-auto max-w-7xl">
           <div className="grid md:grid-cols-4 gap-6">
             {technicalSpecs.map((spec, index) => (
-              <Card key={index} className="text-center hover-lift bg-gradient-card border-0 shadow-elegant">
+              <Card
+                key={index}
+                className="text-center hover-lift bg-gradient-card border-0 shadow-elegant"
+              >
                 <CardContent className="p-6">
                   <div className="w-12 h-12 bg-gradient-accent rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <div className="text-accent-foreground">
-                      {spec.icon}
-                    </div>
+                    <div className="text-accent-foreground">{spec.icon}</div>
                   </div>
                   <h3 className="font-semibold mb-2">{spec.title}</h3>
-                  <p className="text-sm text-muted-foreground">{spec.description}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {spec.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -182,14 +190,14 @@ const Download = () => {
               One-time purchase. Lifetime access. Free updates for 1 year.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {workflows.map((workflow, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className={`relative hover-lift transition-spring ${
-                  workflow.popular 
-                    ? "ring-2 ring-accent bg-gradient-card border-accent/20 scale-105" 
+                  workflow.popular
+                    ? "ring-2 ring-accent bg-gradient-card border-accent/20 scale-105"
                     : "bg-gradient-card border-0"
                 } shadow-elegant`}
               >
@@ -198,15 +206,17 @@ const Download = () => {
                     Most Popular
                   </Badge>
                 )}
-                
+
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-xl">{workflow.name}</CardTitle>
-                  <div className="text-2xl font-bold text-accent">{workflow.price}</div>
+                  <div className="text-2xl font-bold text-accent">
+                    {workflow.price}
+                  </div>
                   <CardDescription className="min-h-[3rem] flex items-center">
                     {workflow.description}
                   </CardDescription>
                 </CardHeader>
-                
+
                 <CardContent className="space-y-6">
                   {/* Features */}
                   <div className="space-y-2">
@@ -217,17 +227,17 @@ const Download = () => {
                       </div>
                     ))}
                   </div>
-                  
+
                   {/* Technical Details */}
                   <div className="text-xs text-muted-foreground space-y-1 border-t pt-4">
                     <div>Size: {workflow.downloadSize}</div>
                     <div>Requires: {workflow.requirements}</div>
                   </div>
-                  
-                  <Button 
+
+                  <Button
                     className={`w-full ${
-                      workflow.popular 
-                        ? "bg-gradient-accent hover:shadow-accent" 
+                      workflow.popular
+                        ? "bg-gradient-accent hover:shadow-accent"
                         : "hover-glow"
                     } transition-spring`}
                     variant={workflow.popular ? "default" : "outline"}
@@ -248,10 +258,11 @@ const Download = () => {
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl font-bold">System Requirements</h2>
             <p className="text-muted-foreground">
-              Make sure your environment meets these requirements before purchasing
+              Make sure your environment meets these requirements before
+              purchasing
             </p>
           </div>
-          
+
           <Card className="bg-gradient-card border-0 shadow-elegant">
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
@@ -282,8 +293,9 @@ const Download = () => {
                 Need <span className="text-primary">setup assistance</span>?
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Our team can help you get up and running quickly with personalized setup assistance, 
-                custom configurations, and ongoing support.
+                Our team can help you get up and running quickly with
+                personalized setup assistance, custom configurations, and
+                ongoing support.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
@@ -304,7 +316,10 @@ const Download = () => {
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-primary hover:shadow-primary transition-spring">
+                <Button
+                  size="lg"
+                  className="bg-gradient-primary hover:shadow-primary transition-spring"
+                >
                   Get Setup Help
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -313,7 +328,7 @@ const Download = () => {
                 </Button>
               </div>
             </div>
-            
+
             <Card className="bg-gradient-card border-0 shadow-elegant">
               <CardHeader>
                 <CardTitle>Setup Assistance Pricing</CardTitle>
@@ -349,15 +364,22 @@ const Download = () => {
                 <Cloud className="h-8 w-8 text-success" />
               </div>
               <h3 className="text-2xl font-bold mb-4">
-                <span className="text-success">Runs on Oracle Cloud Free Tier</span>
+                <span className="text-success">
+                  Runs on Oracle Cloud Free Tier
+                </span>
               </h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                All our workflows are optimized to run efficiently on Oracle Cloud's Always Free tier, 
-                giving you enterprise-grade infrastructure at zero cost.
+                All our workflows are optimized to run efficiently on Oracle
+                Cloud's Always Free tier, giving you enterprise-grade
+                infrastructure at zero cost.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="outline" asChild>
-                  <a href="https://oracle.com" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://oracle.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Learn about Oracle Cloud
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </a>
@@ -378,19 +400,23 @@ const Download = () => {
       <section className="px-4 sm:px-6 lg:px-8 text-center">
         <div className="mx-auto max-w-3xl space-y-6">
           <h2 className="text-3xl font-bold">
-            Ready to deploy your <span className="bg-gradient-accent bg-clip-text text-transparent">automation</span>?
+            Ready to deploy your{" "}
+            <span className="bg-gradient-accent bg-clip-text text-transparent">
+              automation
+            </span>
+            ?
           </h2>
           <p className="text-xl text-muted-foreground">
-            Download our workflows and start automating your invoice processing today
+            Download our workflows and start automating your invoice processing
+            today
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-accent hover:shadow-accent transition-spring">
+            <Button
+              size="lg"
+              className="bg-gradient-accent hover:shadow-accent transition-spring"
+            >
               <DownloadIcon className="mr-2 h-5 w-5" />
               Browse Workflows
-            </Button>
-            <Button variant="outline" size="lg" className="hover-lift">
-              <Github className="mr-2 h-4 w-4" />
-              View on GitHub
             </Button>
           </div>
         </div>
