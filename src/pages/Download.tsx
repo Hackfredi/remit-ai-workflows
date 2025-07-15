@@ -137,10 +137,6 @@ const Download = () => {
       {/* Header */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="mx-auto max-w-4xl text-center space-y-6">
-          <Badge variant="secondary" className="bg-accent-soft text-accent">
-            <DownloadIcon className="w-4 h-4 mr-1" />
-            Self-Hosted Workflows
-          </Badge>
           <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">
             <span className="bg-gradient-accent bg-clip-text text-transparent">
               Download
