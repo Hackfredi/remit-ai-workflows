@@ -1,11 +1,17 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
-import { 
-  CheckCircle, 
-  X, 
+import {
+  CheckCircle,
+  X,
   Star,
   Cloud,
   Download,
@@ -13,7 +19,7 @@ import {
   Shield,
   Headphones,
   ArrowRight,
-  Zap
+  Zap,
 } from "lucide-react";
 
 const Plans = () => {
@@ -21,51 +27,142 @@ const Plans = () => {
   const [isAnnual, setIsAnnual] = useState(false);
 
   const features = [
-    { name: "Invoice Upload (Telegram)", managed: [20, 75, 200, "Unlimited"], selfHosted: ["✓", "✓", "✓", "✓"] },
-    { name: "AI Data Extraction", managed: ["Basic", "Advanced", "Advanced", "Enterprise"], selfHosted: ["Basic", "Advanced", "Advanced", "Advanced"] },
-    { name: "Data Storage", managed: ["Basic", "Advanced", "Advanced", "Enterprise"], selfHosted: ["Local", "Local", "Local", "Local"] },
-    { name: "Google Sheets Export", managed: ["—", "✓", "✓", "✓"], selfHosted: ["—", "✓", "✓", "✓"] },
-    { name: "Automated Reminders", managed: ["—", "✓", "✓", "✓"], selfHosted: ["—", "—", "✓", "✓"] },
-    { name: "Email Reminders", managed: ["—", "✓", "✓", "✓"], selfHosted: ["—", "—", "✓", "✓"] },
-    { name: "Telegram Reminders", managed: ["—", "✓", "✓", "✓"], selfHosted: ["—", "—", "✓", "✓"] },
-    { name: "Business Reports", managed: ["—", "—", "✓", "✓"], selfHosted: ["—", "—", "—", "✓"] },
-    { name: "Analytics Dashboard", managed: ["—", "—", "✓", "✓"], selfHosted: ["—", "—", "✓", "✓"] },
-    { name: "Custom Integrations", managed: ["—", "—", "✓", "✓"], selfHosted: ["—", "✓", "✓", "✓"] },
-    { name: "Priority Support", managed: ["—", "—", "✓", "✓"], selfHosted: ["—", "—", "✓", "✓"] },
-    { name: "Setup Assistance", managed: ["—", "—", "—", "✓"], selfHosted: ["—", "—", "—", "✓"] },
-    { name: "SLA Guarantee", managed: ["—", "—", "—", "✓"], selfHosted: ["—", "—", "—", "—"] },
-    { name: "Custom Workflows", managed: ["—", "—", "—", "✓"], selfHosted: ["—", "—", "—", "✓"] },
-    { name: "Data Sovereignty", managed: ["—", "—", "—", "—"], selfHosted: ["✓", "✓", "✓", "✓"] },
-    { name: "Complete Source Code", managed: ["—", "—", "—", "—"], selfHosted: ["—", "✓", "✓", "✓"] }
+    {
+      name: "Invoice Upload (Telegram)",
+      managed: [20, 75, 200, "Unlimited"],
+      selfHosted: ["✓", "✓", "✓", "✓"],
+    },
+    {
+      name: "AI Data Extraction",
+      managed: ["Basic", "Advanced", "Advanced", "Enterprise"],
+      selfHosted: ["Basic", "Advanced", "Advanced", "Advanced"],
+    },
+    {
+      name: "Data Storage",
+      managed: ["Basic", "Advanced", "Advanced", "Enterprise"],
+      selfHosted: ["Local", "Local", "Local", "Local"],
+    },
+    {
+      name: "Google Sheets Export",
+      managed: ["—", "✓", "✓", "✓"],
+      selfHosted: ["—", "✓", "✓", "✓"],
+    },
+    {
+      name: "Automated Reminders",
+      managed: ["—", "✓", "✓", "✓"],
+      selfHosted: ["—", "—", "✓", "✓"],
+    },
+    {
+      name: "Email Reminders",
+      managed: ["—", "✓", "✓", "✓"],
+      selfHosted: ["—", "—", "✓", "✓"],
+    },
+    {
+      name: "Telegram Reminders",
+      managed: ["—", "✓", "✓", "✓"],
+      selfHosted: ["—", "—", "✓", "✓"],
+    },
+    {
+      name: "Business Reports",
+      managed: ["—", "—", "✓", "✓"],
+      selfHosted: ["—", "—", "—", "✓"],
+    },
+    {
+      name: "Analytics Dashboard",
+      managed: ["—", "—", "✓", "✓"],
+      selfHosted: ["—", "—", "✓", "✓"],
+    },
+    {
+      name: "Custom Integrations",
+      managed: ["—", "—", "✓", "✓"],
+      selfHosted: ["—", "✓", "✓", "✓"],
+    },
+    {
+      name: "Priority Support",
+      managed: ["—", "—", "✓", "✓"],
+      selfHosted: ["—", "—", "✓", "✓"],
+    },
+    {
+      name: "Setup Assistance",
+      managed: ["—", "—", "—", "✓"],
+      selfHosted: ["—", "—", "—", "✓"],
+    },
+    {
+      name: "SLA Guarantee",
+      managed: ["—", "—", "—", "✓"],
+      selfHosted: ["—", "—", "—", "—"],
+    },
+    {
+      name: "Custom Workflows",
+      managed: ["—", "—", "—", "✓"],
+      selfHosted: ["—", "—", "—", "✓"],
+    },
+    {
+      name: "Data Sovereignty",
+      managed: ["—", "—", "—", "—"],
+      selfHosted: ["✓", "✓", "✓", "✓"],
+    },
+    {
+      name: "Complete Source Code",
+      managed: ["—", "—", "—", "—"],
+      selfHosted: ["—", "✓", "✓", "✓"],
+    },
   ];
 
   const managedPricing = [
-    { name: "Basic", monthly: 19.99, annual: 191.90, inr: { monthly: 999, annual: 9590 } },
-    { name: "Pro", monthly: 39.99, annual: 383.90, inr: { monthly: 1999, annual: 19190 } },
-    { name: "Business", monthly: 79.99, annual: 767.90, inr: { monthly: 3999, annual: 38390 } },
-    { name: "Enterprise", monthly: "Custom", annual: "Custom", inr: { monthly: "Custom", annual: "Custom" } }
+    {
+      name: "Basic",
+      monthly: 19.99,
+      annual: 191.9,
+      inr: { monthly: 999, annual: 9590 },
+    },
+    {
+      name: "Pro",
+      monthly: 39.99,
+      annual: 383.9,
+      inr: { monthly: 1999, annual: 19190 },
+    },
+    {
+      name: "Business",
+      monthly: 79.99,
+      annual: 767.9,
+      inr: { monthly: 3999, annual: 38390 },
+    },
+    {
+      name: "Enterprise",
+      monthly: "Custom",
+      annual: "Custom",
+      inr: { monthly: "Custom", annual: "Custom" },
+    },
   ];
 
   const selfHostedPricing = [
     { name: "Test Drive", price: 10, inr: 500 },
     { name: "Standard", price: 199, inr: 9999 },
     { name: "Pro", price: 399, inr: 18999 },
-    { name: "Ultimate", price: 749, inr: 37499 }
+    { name: "Ultimate", price: 749, inr: 37499 },
   ];
 
-  const currentPricing = planType === "managed" ? managedPricing : selfHostedPricing;
+  const currentPricing =
+    planType === "managed" ? managedPricing : selfHostedPricing;
 
   const getFeatureValue = (feature, planIndex) => {
-    const values = planType === "managed" ? feature.managed : feature.selfHosted;
+    const values =
+      planType === "managed" ? feature.managed : feature.selfHosted;
     const value = values[planIndex];
-    
-    if (value === "✓") return <CheckCircle className="h-4 w-4 text-success mx-auto" />;
-    if (value === "—") return <X className="h-4 w-4 text-muted-foreground mx-auto" />;
+
+    if (value === "✓")
+      return <CheckCircle className="h-4 w-4 text-success mx-auto" />;
+    if (value === "—")
+      return <X className="h-4 w-4 text-muted-foreground mx-auto" />;
     return <span className="text-sm">{value}</span>;
   };
 
   const isPlanPopular = (index) => {
-    return (planType === "managed" && index === 1) || (planType === "self-hosted" && index === 2);
+    return (
+      (planType === "managed" && index === 1) ||
+      (planType === "self-hosted" && index === 2)
+    );
   };
 
   return (
@@ -73,14 +170,16 @@ const Plans = () => {
       {/* Header */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="mx-auto max-w-4xl text-center space-y-6">
-          <Badge variant="secondary" className="bg-primary-soft text-primary">
-            Plans Comparison
-          </Badge>
           <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">
-            Compare all <span className="bg-gradient-primary bg-clip-text text-transparent">features</span> side by side
+            Compare all{" "}
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              features
+            </span>{" "}
+            side by side
           </h1>
           <p className="text-xl text-muted-foreground">
-            Detailed comparison to help you choose the perfect plan for your needs
+            Detailed comparison to help you choose the perfect plan for your
+            needs
           </p>
         </div>
       </section>
@@ -92,8 +191,8 @@ const Plans = () => {
             <button
               onClick={() => setPlanType("managed")}
               className={`p-6 rounded-xl transition-smooth text-left ${
-                planType === "managed" 
-                  ? "bg-background shadow-elegant" 
+                planType === "managed"
+                  ? "bg-background shadow-elegant"
                   : "hover:bg-background/50"
               }`}
             >
@@ -102,15 +201,16 @@ const Plans = () => {
                 <span className="text-lg font-semibold">Managed Service</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Fully managed cloud solution with automatic updates and maintenance
+                Fully managed cloud solution with automatic updates and
+                maintenance
               </p>
             </button>
-            
+
             <button
               onClick={() => setPlanType("self-hosted")}
               className={`p-6 rounded-xl transition-smooth text-left ${
-                planType === "self-hosted" 
-                  ? "bg-background shadow-elegant" 
+                planType === "self-hosted"
+                  ? "bg-background shadow-elegant"
                   : "hover:bg-background/50"
               }`}
             >
@@ -137,14 +237,19 @@ const Plans = () => {
                   <p className="text-sm text-muted-foreground">Save 20%</p>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <span className={`text-sm ${!isAnnual ? "text-foreground" : "text-muted-foreground"}`}>
+                  <span
+                    className={`text-sm ${
+                      !isAnnual ? "text-foreground" : "text-muted-foreground"
+                    }`}
+                  >
                     Monthly
                   </span>
-                  <Switch 
-                    checked={isAnnual} 
-                    onCheckedChange={setIsAnnual}
-                  />
-                  <span className={`text-sm ${isAnnual ? "text-foreground" : "text-muted-foreground"}`}>
+                  <Switch checked={isAnnual} onCheckedChange={setIsAnnual} />
+                  <span
+                    className={`text-sm ${
+                      isAnnual ? "text-foreground" : "text-muted-foreground"
+                    }`}
+                  >
                     Yearly
                   </span>
                 </div>
@@ -178,11 +283,20 @@ const Plans = () => {
                         {typeof plan.monthly === "number" ? (
                           <>
                             <div className="text-2xl font-bold">
-                              ${isAnnual ? (plan.annual / 12).toFixed(2) : plan.monthly}
-                              <span className="text-sm text-muted-foreground font-normal">/mo</span>
+                              $
+                              {isAnnual
+                                ? (plan.annual / 12).toFixed(2)
+                                : plan.monthly}
+                              <span className="text-sm text-muted-foreground font-normal">
+                                /mo
+                              </span>
                             </div>
                             <div className="text-sm text-muted-foreground">
-                              ₹{isAnnual ? Math.round(plan.inr.annual / 12) : plan.inr.monthly}/mo
+                              ₹
+                              {isAnnual
+                                ? Math.round(plan.inr.annual / 12)
+                                : plan.inr.monthly}
+                              /mo
                             </div>
                           </>
                         ) : (
@@ -193,23 +307,28 @@ const Plans = () => {
                       <div className="space-y-1">
                         <div className="text-2xl font-bold">
                           ${plan.price}
-                          <span className="text-sm text-muted-foreground font-normal"> once</span>
+                          <span className="text-sm text-muted-foreground font-normal">
+                            {" "}
+                            once
+                          </span>
                         </div>
                         <div className="text-sm text-muted-foreground">
                           ₹{plan.inr} once
                         </div>
                       </div>
                     )}
-                    <Button 
+                    <Button
                       className={`w-full ${
-                        isPlanPopular(index) 
-                          ? "bg-gradient-primary hover:shadow-primary" 
+                        isPlanPopular(index)
+                          ? "bg-gradient-primary hover:shadow-primary"
                           : "hover-glow"
                       } transition-spring`}
                       variant={isPlanPopular(index) ? "default" : "outline"}
                       size="sm"
                     >
-                      {plan.name === "Enterprise" || plan.name === "Custom" ? "Contact Sales" : "Get Started"}
+                      {plan.name === "Enterprise" || plan.name === "Custom"
+                        ? "Contact Sales"
+                        : "Get Started"}
                     </Button>
                   </div>
                 </div>
@@ -219,10 +338,11 @@ const Plans = () => {
             {/* Feature Rows */}
             <div className="divide-y">
               {features.map((feature, featureIndex) => (
-                <div key={featureIndex} className="grid grid-cols-5 gap-4 p-4 hover:bg-muted/20 transition-smooth">
-                  <div className="col-span-1 font-medium">
-                    {feature.name}
-                  </div>
+                <div
+                  key={featureIndex}
+                  className="grid grid-cols-5 gap-4 p-4 hover:bg-muted/20 transition-smooth"
+                >
+                  <div className="col-span-1 font-medium">{feature.name}</div>
                   {[0, 1, 2, 3].map((planIndex) => (
                     <div key={planIndex} className="text-center">
                       {getFeatureValue(feature, planIndex)}
@@ -239,9 +359,13 @@ const Plans = () => {
       <section className="px-4 sm:px-6 lg:px-8 mt-24">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Why choose <span className="text-primary">{planType === "managed" ? "managed service" : "self-hosted"}</span>?
+            Why choose{" "}
+            <span className="text-primary">
+              {planType === "managed" ? "managed service" : "self-hosted"}
+            </span>
+            ?
           </h2>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {planType === "managed" ? (
               <>
@@ -252,11 +376,12 @@ const Plans = () => {
                     </div>
                     <h3 className="font-semibold mb-2">Zero Maintenance</h3>
                     <p className="text-muted-foreground">
-                      We handle all updates, backups, and infrastructure management
+                      We handle all updates, backups, and infrastructure
+                      management
                     </p>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="hover-lift bg-gradient-card border-0 shadow-elegant text-center">
                   <CardContent className="p-6">
                     <div className="w-12 h-12 bg-gradient-accent rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -268,7 +393,7 @@ const Plans = () => {
                     </p>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="hover-lift bg-gradient-card border-0 shadow-elegant text-center">
                   <CardContent className="p-6">
                     <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -290,11 +415,12 @@ const Plans = () => {
                     </div>
                     <h3 className="font-semibold mb-2">Complete Control</h3>
                     <p className="text-muted-foreground">
-                      Your data never leaves your infrastructure. Full customization available.
+                      Your data never leaves your infrastructure. Full
+                      customization available.
                     </p>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="hover-lift bg-gradient-card border-0 shadow-elegant text-center">
                   <CardContent className="p-6">
                     <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -306,7 +432,7 @@ const Plans = () => {
                     </p>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="hover-lift bg-gradient-card border-0 shadow-elegant text-center">
                   <CardContent className="p-6">
                     <div className="w-12 h-12 bg-gradient-accent rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -314,7 +440,8 @@ const Plans = () => {
                     </div>
                     <h3 className="font-semibold mb-2">Custom Integrations</h3>
                     <p className="text-muted-foreground">
-                      Modify workflows to integrate with any existing system or API.
+                      Modify workflows to integrate with any existing system or
+                      API.
                     </p>
                   </CardContent>
                 </Card>
@@ -328,13 +455,20 @@ const Plans = () => {
       <section className="px-4 sm:px-6 lg:px-8 mt-24">
         <div className="mx-auto max-w-4xl text-center space-y-8">
           <h2 className="text-3xl font-bold">
-            Ready to get started with <span className="bg-gradient-primary bg-clip-text text-transparent">PJ Automation</span>?
+            Ready to get started with{" "}
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              PJ Automation
+            </span>
+            ?
           </h2>
           <p className="text-xl text-muted-foreground">
             Choose the perfect plan for your business and start automating today
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-primary hover:shadow-primary transition-spring">
+            <Button
+              size="lg"
+              className="bg-gradient-primary hover:shadow-primary transition-spring"
+            >
               Start Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
