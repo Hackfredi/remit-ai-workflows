@@ -3,11 +3,9 @@ FROM node:18-alpine AS build
 
 WORKDIR /app
 
-# Copy only the package files first to cache dependencies
 COPY package*.json ./
 RUN npm install
 
-# Copy the rest of the project files and build
 COPY . .
 RUN npm run build
 
@@ -17,8 +15,8 @@ FROM nginx:alpine
 # Copy built app from previous stage
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Custom nginx config for SPA routing
-COPY --from=build /nginx.conf /etc/nginx/conf.d/default.conf
+# 🔥 Copy nginx.conf from your build context (not from previous image)
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
