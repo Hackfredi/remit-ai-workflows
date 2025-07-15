@@ -130,10 +130,6 @@ const FAQs = () => {
       {/* Header */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="mx-auto max-w-4xl text-center space-y-6">
-          <Badge variant="secondary" className="bg-primary-soft text-primary">
-            <HelpCircle className="w-4 h-4 mr-1" />
-            Frequently Asked Questions
-          </Badge>
           <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">
             Get{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
