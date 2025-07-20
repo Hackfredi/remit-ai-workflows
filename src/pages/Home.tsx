@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import Pricing from "./Pricing"; // relative import from same folder
 import {
   Card,
   CardContent,
@@ -6,7 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Pricing from "@/pages/Pricing";
 import { Badge } from "@/components/ui/badge";
 import {
   Bot,
@@ -142,13 +143,15 @@ const Home = () => {
                   Start Free Trial
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button
+                <Link to="/pricing"></Link>
+                 <Button
                   variant="outline"
                   size="lg"
                   className="hover-lift text-lg px-8 py-6"
-                >
+                 >
                   View Pricing
-                </Button>
+                 </Button>
+                </Link>
               </div>
 
               <div className="flex items-center space-x-8 text-sm text-muted-foreground">
