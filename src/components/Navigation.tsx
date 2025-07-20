@@ -73,7 +73,11 @@ const Navigation = () => {
             </Button>
 
             <Button variant="ghost" size="sm" asChild className="hover-lift">
-              <a href="https://t.me" target="_blank" rel="noopener noreferrer">
+              <a
+                href="http://t.me/Devang_4302"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <MessageCircle className="h-4 w-4" />
               </a>
             </Button>
