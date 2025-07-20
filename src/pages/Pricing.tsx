@@ -315,7 +315,7 @@ const Pricing = () => {
                             $
                             {isAnnual
                               ? plan.yearlyPrice / 12
-                              : plan.monthlyPrice}
+                              : plan.monthlyPrice.toFixed(2)}
                             <span className="text-sm text-muted-foreground font-normal">
                               /month
                             </span>
