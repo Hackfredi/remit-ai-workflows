@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -6,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Pricing from "@/pages/Pricing";
 import { Badge } from "@/components/ui/badge";
 import {
   Bot,
@@ -133,22 +135,24 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-gradient-primary hover:shadow-primary transition-spring text-lg px-8 py-6"
-                >
-                  Start Free Trial
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="hover-lift text-lg px-8 py-6"
-                >
-                  View Pricing
-                </Button>
-              </div>
+              <Route>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-primary hover:shadow-primary transition-spring text-lg px-8 py-6"
+                  >
+                    Start Free Trial
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="hover-lift text-lg px-8 py-6"
+                  >
+                    <Route path="/pricing" element={<View Pricing />} />
+                  </Button>
+                </div>
+              </Route>
 
               <div className="flex items-center space-x-8 text-sm text-muted-foreground">
                 <div className="flex items-center space-x-1">
