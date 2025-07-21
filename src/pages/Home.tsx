@@ -114,60 +114,58 @@ const Home = () => {
       <section className="relative px-4 pt-20 pb-32 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-hero opacity-10" />
         <div className="relative mx-auto max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-                  <span className="bg-gradient-hero bg-clip-text text-transparent">
-                    Simplify Operations.
-                  </span>
-                  <br />
-                  <span className="text-foreground">Automate</span>
-                  <br />
-                  <span className="bg-gradient-accent bg-clip-text text-transparent">
-                    What Matters.
-                  </span>
-                </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  From invoicing and inventory to website creation and hosting,
-                  our AI-powered solutions streamline your operations. Choose
-                  fully-managed services or self-hosted deployment — with full
-                  control and complete data privacy.
-                </p>
-              </div>
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
+                <span className="bg-gradient-hero bg-clip-text text-transparent">
+                  Simplify Operations.
+                </span>
+                <br />
+                <span className="text-foreground">Automate</span>
+                <br />
+                <span className="bg-gradient-accent bg-clip-text text-transparent">
+                  What Matters.
+                </span>
+              </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                From invoicing and inventory to website creation and hosting,
+                our AI-powered solutions streamline your operations. Choose
+                fully-managed services or self-hosted deployment — with full
+                control and complete data privacy.
+              </p>
+            </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                size="lg"
+                className="bg-gradient-primary hover:shadow-primary transition-spring text-lg px-8 py-6"
+              >
+                Start Free Trial
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Link to="/pricing">
                 <Button
+                  variant="outline"
                   size="lg"
-                  className="bg-gradient-primary hover:shadow-primary transition-spring text-lg px-8 py-6"
+                  className="hover-lift text-lg px-8 py-6"
                 >
-                  Start Free Trial
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  View Pricing
                 </Button>
-                <Link to="/pricing">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="hover-lift text-lg px-8 py-6"
-                  >
-                    View Pricing
-                  </Button>
-                </Link>
-              </div>
+              </Link>
+            </div>
 
-              <div className="flex items-center space-x-8 text-sm text-muted-foreground">
-                <div className="flex items-center space-x-1">
-                  <CheckCircle className="h-4 w-4 text-success" />
-                  <span>14-day free trial</span>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <CheckCircle className="h-4 w-4 text-success" />
-                  <span>No credit card required</span>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <CheckCircle className="h-4 w-4 text-success" />
-                  <span>Cancel anytime</span>
-                </div>
+            <div className="flex items-center space-x-8 text-sm text-muted-foreground">
+              <div className="flex items-center space-x-1">
+                <CheckCircle className="h-4 w-4 text-success" />
+                <span>14-day free trial</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <CheckCircle className="h-4 w-4 text-success" />
+                <span>No credit card required</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <CheckCircle className="h-4 w-4 text-success" />
+                <span>Cancel anytime</span>
               </div>
             </div>
           </div>
