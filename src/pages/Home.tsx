@@ -11,6 +11,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import {
   Bot,
+  Boxes,
   Upload,
   Database,
   Bell,
@@ -70,10 +71,10 @@ const Home = () => {
     },
     {
       number: "02",
-      title: "Auto Extract Data",
+      title: "Inventory Management",
       description:
         "Our AI instantly extracts all relevant data from your invoices with high accuracy.",
-      icon: <Bot className="h-8 w-8" />,
+      icon: <Boxes className="h-8 w-8" />,
     },
     {
       number: "03",
