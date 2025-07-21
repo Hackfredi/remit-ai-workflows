@@ -170,7 +170,11 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <img src={heroImage} alt="PJ Automation Dashboard" />
+            <img
+              src={heroImage}
+              alt="PJ Automation Dashboard"
+              className="w-full lg:w-[120%] h-auto"
+            />
           </div>
         </div>
       </section>
