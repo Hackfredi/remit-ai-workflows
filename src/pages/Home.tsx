@@ -17,7 +17,7 @@ import {
   CheckCircle,
   Star,
   ArrowRight,
-  MessageCircle,
+  FileText,
   Mail,
   BarChart3,
   Shield,
@@ -66,7 +66,7 @@ const Home = () => {
       title: "Invoice Management",
       description:
         "Simply send your invoices through our Telegram bot - it's that easy!",
-      icon: <MessageCircle className="h-8 w-8" />,
+      icon: <FileText className="h-8 w-8" />,
     },
     {
       number: "02",
