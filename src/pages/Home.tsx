@@ -129,10 +129,10 @@ const Home = () => {
                   </span>
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  From invoicing and inventory to website creation and hosting
-                  our AI-powered solutions streamline operations. Choose
-                  fully-managed services or self-hosted deployment with full
-                  control and data privacy.
+                  From invoicing and inventory to website creation and hosting,
+                  our AI-powered solutions streamline your operations. Choose
+                  fully-managed services or self-hosted deployment — with full
+                  control and complete data privacy.
                 </p>
               </div>
 
