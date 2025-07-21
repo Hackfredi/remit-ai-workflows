@@ -189,7 +189,7 @@ const Home = () => {
               Effective.
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Get started in minutes with our streamlined 3-step process
+              Get started in minutes with our streamlined process
             </p>
           </div>
 
