@@ -141,8 +141,11 @@ const Download = () => {
             <span className="bg-gradient-accent bg-clip-text text-transparent">
               Download
             </span>{" "}
-            and deploy <br />
-            on your infrastructure
+            and
+            <span className="bg-gradient-accent bg-clip-text text-transparent">
+              Deploy
+            </span>
+            <br /> on your infrastructure
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Get complete control with our self-hosted n8n workflows. Perfect for
