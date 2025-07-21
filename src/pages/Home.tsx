@@ -119,13 +119,11 @@ const Home = () => {
               <div className="space-y-4">
                 <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
                   <span className="bg-gradient-hero bg-clip-text text-transparent">
-                    Automate Invoices.
+                    Simplify Operations.
                   </span>
                   <br />
-                  <span className="text-foreground">Organize Data.</span>
-                  <br />
                   <span className="bg-gradient-accent bg-clip-text text-transparent">
-                    Get Paid Faster.
+                    Automate What Matters.
                   </span>
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
