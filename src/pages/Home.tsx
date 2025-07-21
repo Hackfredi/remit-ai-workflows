@@ -14,6 +14,7 @@ import {
   Boxes,
   Upload,
   Database,
+  Globe,
   Bell,
   CheckCircle,
   Star,
@@ -78,10 +79,10 @@ const Home = () => {
     },
     {
       number: "03",
-      title: "Organized Storage + Reminders",
+      title: "Website Creation and Hosting",
       description:
         "Data is stored securely and reminders are sent automatically to ensure timely payments.",
-      icon: <Database className="h-8 w-8" />,
+      icon: <Globe className="h-8 w-8" />,
     },
   ];
 
