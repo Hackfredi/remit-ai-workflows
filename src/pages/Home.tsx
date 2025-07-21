@@ -170,15 +170,6 @@ const Home = () => {
                 </div>
               </div>
             </div>
-
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-3xl opacity-20" />
-              <img
-                src={heroImage}
-                alt="PJ Automation Dashboard"
-                className="relative rounded-3xl shadow-elegant hover-lift"
-              />
-            </div>
           </div>
         </div>
       </section>
