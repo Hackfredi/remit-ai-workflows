@@ -63,7 +63,7 @@ const Home = () => {
   const steps = [
     {
       number: "01",
-      title: "Upload via Telegram",
+      title: "Invoice Management",
       description:
         "Simply send your invoices through our Telegram bot - it's that easy!",
       icon: <MessageCircle className="h-8 w-8" />,
