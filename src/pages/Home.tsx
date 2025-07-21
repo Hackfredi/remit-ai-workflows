@@ -170,14 +170,11 @@ const Home = () => {
                 </div>
               </div>
             </div>
-
-            <div className="relative">
-              <img
-                src={heroImage}
-                alt="PJ Automation Dashboard"
-                className="relative rounded-3xl shadow-elegant hover-lift"
-              />
-            </div>
+            <img
+              src={heroImage}
+              alt="PJ Automation Dashboard"
+              className="relative rounded-3xl shadow-elegant hover-lift"
+            />
           </div>
         </div>
       </section>
