@@ -129,7 +129,7 @@ const Home = () => {
                   </span>
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  From invoicing and inventory to website creation and hosting —
+                  From invoicing and inventory to website creation and hosting
                   our AI-driven solutions help streamline your business. Choose
                   fully-managed services or self-hosted deployment with full
                   control and data privacy.
