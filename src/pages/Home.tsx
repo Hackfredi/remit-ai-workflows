@@ -122,8 +122,10 @@ const Home = () => {
                     Simplify Operations.
                   </span>
                   <br />
+                  <span className="text-foreground">Automate</span>
+                  <br />
                   <span className="bg-gradient-accent bg-clip-text text-transparent">
-                    Automate What Matters.
+                    What Matters.
                   </span>
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
