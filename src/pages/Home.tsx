@@ -170,11 +170,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <img
-              src={heroImage}
-              alt="PJ Automation Dashboard"
-              className="relative rounded-3xl shadow-elegant hover-lift"
-            />
+            <img src={heroImage} alt="PJ Automation Dashboard" />
           </div>
         </div>
       </section>
