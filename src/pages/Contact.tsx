@@ -14,7 +14,6 @@ import {
   MessageCircle,
   Clock,
   MapPin,
-  Phone,
   Send,
   Headphones,
   Users,
