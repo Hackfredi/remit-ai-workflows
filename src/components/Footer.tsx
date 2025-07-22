@@ -5,9 +5,10 @@ import { Bot, MessageCircle, Mail, ExternalLink } from "lucide-react";
 const Footer = () => {
   const footerLinks = {
     product: [
-      { name: "How It Works", path: "/how-it-works" },
+      { name: "Invoice", path: "/how-it-works" },
+      { name: "Inventory", path: "/inventory" },
       { name: "Pricing", path: "/pricing" },
-      { name: "Download", path: "/download" },
+      { name: "Hosting", path: "/download" },
       { name: "Plans Comparison", path: "/plans" },
     ],
     support: [
