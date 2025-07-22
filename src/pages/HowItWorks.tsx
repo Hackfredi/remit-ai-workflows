@@ -173,10 +173,6 @@ const HowItWorks = () => {
                       </div>
                     </div>
 
-                    <p className="text-xl text-muted-foreground leading-relaxed">
-                      {step.description}
-                    </p>
-
                     <div className="space-y-3">
                       {step.details.map((detail, detailIndex) => (
                         <div
