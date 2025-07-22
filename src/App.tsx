@@ -6,7 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Home from "@/pages/Home";
-import HowItWorks from "@/pages/HowItWorks";
+import Invoice from "@/pages/Invoice";
+import Inventory from "@/pages/Inventory";
 import Pricing from "@/pages/Pricing";
 import Plans from "@/pages/Plans";
 import Hosting from "@/pages/Hosting & Inventory";
@@ -27,7 +28,8 @@ const App = () => (
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/how-it-works" element={<HowItWorks />} />
+              <Route path="/how-it-works" element={<Invoice />} />
+              <Route path="/inventory" element={<Inventory />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/plans" element={<Plans />} />
               <Route path="/download" element={<Hosting />} />
