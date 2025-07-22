@@ -210,9 +210,6 @@ const HowItWorks = () => {
                         </div>
                         <div className="space-y-2">
                           <h3 className="text-2xl font-bold">{step.title}</h3>
-                          <p className="text-muted-foreground">
-                            {step.description}
-                          </p>
                         </div>
                       </div>
                     </Card>
